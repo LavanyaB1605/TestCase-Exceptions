@@ -33,7 +33,7 @@ public class UserRegistrationValidation {
     public static void validateEmail () {
         System.out.println("Enter email ");
         String email = sc.nextLine();
-        String emailPattern = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*[@]{1}[a-z]+[.]{1}[a-z]{2,4}[.]*[a-z]*{2}$";
+        String emailPattern = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*[@]{1}[a-z]+[.]{1}[a-z]{2,4}[.]*[a-z]{2}$";
         Pattern pattern = Pattern.compile(emailPattern);
         Matcher matcher = pattern.matcher(email);
         if (matcher.matches()) {
@@ -45,7 +45,7 @@ public class UserRegistrationValidation {
     public static void main(String[] args) {
         firstNameValidation();
         validateLastName();
-        validateEmail ();
+        validateEmail();
     }
 
 }
